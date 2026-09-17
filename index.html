@@ -33,29 +33,69 @@
   >
     <!-- Navigation Bar -->
     <nav
-      class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-rose-100 py-3 px-6 flex justify-between items-center"
+      class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-rose-100 py-3 px-4 md:px-6"
     >
-      <a href="#" class="flex items-center gap-3">
-        <img
-          src="logo.png"
-          alt="Colours by Val Logo"
-          class="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border border-rose-200 shadow-sm"
-        />
-        <span
-          class="text-2xl md:text-3xl font-signature text-zinc-900 tracking-wide"
-          >Colours by Val</span
-        >
-      </a>
+      <div class="flex justify-between items-center max-w-6xl mx-auto">
+        <a href="#" class="flex items-center gap-2 md:gap-3">
+          <img
+            src="logo.png"
+            alt="Colours by Val Logo"
+            class="h-9 w-9 md:h-12 md:w-12 rounded-full object-cover border border-rose-200 shadow-sm"
+          />
+          <span
+            class="text-xl md:text-3xl font-signature text-zinc-900 tracking-wide"
+            >Colours by Val</span
+          >
+        </a>
 
+        <!-- Desktop Links -->
+        <div
+          class="hidden md:flex items-center gap-6 text-xs md:text-sm font-nav tracking-wider uppercase text-zinc-600"
+        >
+          <a href="#about" class="hover:text-rose-500 transition">About</a>
+          <a href="#gallery" class="hover:text-rose-500 transition">Work</a>
+          <a href="#contact" class="hover:text-rose-500 transition">Contact</a>
+          <a
+            href="#contact"
+            class="bg-rose-400 hover:bg-rose-500 text-white text-[10px] md:text-xs font-semibold tracking-widest px-4 py-2 rounded-full transition shadow-sm"
+          >
+            Custom Order
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-zinc-700 p-2 focus:outline-none"
+          aria-label="Toggle Navigation"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
       <div
-        class="flex items-center gap-6 text-xs md:text-sm font-nav tracking-wider uppercase text-zinc-600"
+        id="mobile-menu"
+        class="hidden md:hidden pt-4 pb-3 border-t border-rose-100 mt-3 text-center font-nav text-xs tracking-wider uppercase text-zinc-600 space-y-3"
       >
-        <a href="#about" class="hover:text-rose-500 transition">About</a>
-        <a href="#gallery" class="hover:text-rose-500 transition">Work</a>
-        <a href="#contact" class="hover:text-rose-500 transition">Contact</a>
+        <a href="#about" class="block py-1 hover:text-rose-500">About</a>
+        <a href="#gallery" class="block py-1 hover:text-rose-500">Work</a>
+        <a href="#contact" class="block py-1 hover:text-rose-500">Contact</a>
         <a
           href="#contact"
-          class="bg-rose-400 hover:bg-rose-500 text-white text-[10px] md:text-xs font-semibold tracking-widest px-4 py-2 rounded-full transition shadow-sm"
+          class="inline-block bg-rose-400 text-white text-[10px] font-semibold tracking-widest px-5 py-2 rounded-full shadow-sm mt-2"
         >
           Custom Order
         </a>
@@ -63,39 +103,41 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-6 pt-20 pb-16 text-center">
+    <section
+      class="max-w-4xl mx-auto px-4 md:px-6 pt-12 md:pt-20 pb-12 text-center"
+    >
       <span
-        class="text-[11px] font-nav font-medium tracking-widest uppercase text-rose-500 bg-rose-100/70 px-4 py-1.5 rounded-full border border-rose-200"
+        class="text-[10px] md:text-[11px] font-nav font-medium tracking-widest uppercase text-rose-500 bg-rose-100/70 px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-rose-200"
       >
         Handcrafted in Ireland
       </span>
 
       <h1
-        class="text-4xl md:text-6xl font-serif-artistic font-normal text-zinc-900 mt-8 mb-6 leading-tight"
+        class="text-3xl md:text-6xl font-serif-artistic font-normal text-zinc-900 mt-6 mb-4 md:mb-6 leading-tight"
       >
         Whimsical, Hand-Painted <br />
         <span class="italic text-rose-400">Art for Everyday Life</span>
       </h1>
 
       <p
-        class="text-zinc-600 max-w-lg mx-auto mb-10 text-base leading-relaxed font-light"
+        class="text-zinc-600 max-w-lg mx-auto mb-8 text-sm md:text-base leading-relaxed font-light"
       >
         Custom hand-painted tote bags, glasses cases, canvases, and flower pots.
         Crafted with detail, vibrant acrylics, and personal love.
       </p>
 
       <div
-        class="flex justify-center gap-4 font-nav text-xs tracking-wider uppercase"
+        class="flex justify-center gap-3 font-nav text-[11px] md:text-xs tracking-wider uppercase"
       >
         <a
           href="#gallery"
-          class="bg-zinc-900 hover:bg-zinc-800 text-white font-medium px-7 py-3.5 rounded-full transition shadow-sm"
+          class="bg-zinc-900 hover:bg-zinc-800 text-white font-medium px-5 py-3 md:px-7 md:py-3.5 rounded-full transition shadow-sm"
         >
           View Collection
         </a>
         <a
           href="#contact"
-          class="bg-white hover:bg-rose-50 text-zinc-800 font-medium px-7 py-3.5 rounded-full border border-rose-200 transition"
+          class="bg-white hover:bg-rose-50 text-zinc-800 font-medium px-5 py-3 md:px-7 md:py-3.5 rounded-full border border-rose-200 transition"
         >
           Inquire Now
         </a>
@@ -105,16 +147,18 @@
     <!-- About Me Section -->
     <section
       id="about"
-      class="max-w-5xl mx-auto px-6 py-16 border-t border-rose-100/60"
+      class="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16 border-t border-rose-100/60"
     >
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+      <div
+        class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center"
+      >
         <!-- Left: Small Image Holder -->
         <div class="md:col-span-5 flex justify-center">
           <div
-            class="relative w-64 h-72 md:w-full md:h-80 bg-rose-100/60 rounded-2xl overflow-hidden border-2 border-white shadow-md flex flex-col items-center justify-center text-zinc-400"
+            class="relative w-48 h-56 sm:w-64 sm:h-72 md:w-full md:h-80 bg-rose-100/60 rounded-2xl overflow-hidden border-2 border-white shadow-md flex flex-col items-center justify-center text-zinc-400"
           >
             <svg
-              class="w-10 h-10 mb-2 opacity-40"
+              class="w-8 h-8 mb-2 opacity-40"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -126,35 +170,44 @@
                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
               ></path>
             </svg>
-            <span class="text-xs font-nav uppercase tracking-wider"
+            <span
+              class="text-[10px] sm:text-xs font-nav uppercase tracking-wider"
               >[ Val's Photo / Workspace ]</span
             >
           </div>
         </div>
 
         <!-- Right: Story Text -->
-        <div class="md:col-span-7">
+        <div class="md:col-span-7 text-center md:text-left">
           <span
             class="text-xs font-nav uppercase tracking-widest text-rose-400 font-semibold"
             >Behind the Brushes</span
           >
-          <h2 class="text-3xl font-serif-artistic text-zinc-900 mt-2 mb-4">
+          <h2
+            class="text-2xl md:text-3xl font-serif-artistic text-zinc-900 mt-1 mb-3"
+          >
             Meet the Artist
           </h2>
 
-          <p class="text-zinc-600 text-base leading-relaxed font-light mb-4">
+          <p
+            class="text-zinc-600 text-sm md:text-base leading-relaxed font-light mb-3"
+          >
             Hi, I’m Val! Welcome to my creative corner. What started as a
             personal passion for turning everyday blank items into colorful
             keepsakes has grown into custom hand-painted collections.
           </p>
-          <p class="text-zinc-600 text-sm leading-relaxed font-light mb-6">
+          <p
+            class="text-zinc-600 text-base md:text-sm leading-relaxed font-light mb-5"
+          >
             Every piece is painted individually using quality acrylics and
             fine-line markers—meaning no two items are ever identical. Whether
             it’s a gift for a loved one or a custom treat for yourself, I put
             heart and detail into every stroke.
           </p>
 
-          <div class="flex items-center gap-4 text-xs font-nav text-zinc-500">
+          <div
+            class="flex items-center justify-center md:justify-start gap-3 text-[11px] md:text-xs font-nav text-zinc-500"
+          >
             <span class="flex items-center gap-1.5"
               ><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Open
               for Commissions</span
@@ -166,158 +219,201 @@
       </div>
     </section>
 
-    <!-- Gallery / Work Section -->
+    <!-- Gallery / Work Section (2-Column Grid on Mobile: grid-cols-2) -->
     <section
       id="gallery"
-      class="max-w-6xl mx-auto px-6 py-16 border-t border-rose-100/60"
+      class="max-w-6xl mx-auto px-3 md:px-6 py-12 md:py-16 border-t border-rose-100/60"
     >
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-serif-artistic text-zinc-900">
+      <div class="text-center mb-8 md:mb-12">
+        <h2 class="text-2xl md:text-3xl font-serif-artistic text-zinc-900">
           Featured Creations
         </h2>
         <p
-          class="text-xs font-nav uppercase tracking-widest text-zinc-400 mt-2"
+          class="text-[10px] md:text-xs font-nav uppercase tracking-widest text-zinc-400 mt-1"
         >
           Explore recent hand-painted pieces
         </p>
-        <div class="w-10 h-0.5 bg-rose-300 mx-auto mt-3 rounded-full"></div>
+        <div class="w-10 h-0.5 bg-rose-300 mx-auto mt-2 rounded-full"></div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 2 Columns on Mobile (grid-cols-2), 3 Columns on Desktop (lg:grid-cols-3) -->
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
         <div
-          class="bg-white rounded-2xl overflow-hidden border border-rose-100 shadow-sm hover:shadow-md transition"
+          class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
         >
           <div
-            class="h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400"
+            class="h-36 sm:h-52 md:h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400 p-2 text-center"
           >
-            <span class="text-xs font-nav uppercase"
+            <span class="text-[10px] sm:text-xs font-nav uppercase"
               >[ Photo: Glasses Case ]</span
             >
           </div>
-          <div class="p-6">
-            <h3 class="font-serif-artistic text-lg text-zinc-900">
-              Custom Leather Glasses Case
-            </h3>
-            <p class="text-xs text-zinc-500 mt-1 leading-relaxed">
-              Hand-painted line florals & sun motifs using vibrant acrylic
-              markers
-            </p>
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="font-serif-artistic text-xs sm:text-base md:text-lg text-zinc-900 leading-snug"
+              >
+                Glasses Case
+              </h3>
+              <p
+                class="text-[10px] sm:text-xs text-zinc-500 mt-1 leading-normal"
+              >
+                Hand-painted line florals & sun motifs.
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="bg-white rounded-2xl overflow-hidden border border-rose-100 shadow-sm hover:shadow-md transition"
+          class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
         >
           <div
-            class="h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400"
+            class="h-36 sm:h-52 md:h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400 p-2 text-center"
           >
-            <span class="text-xs font-nav uppercase"
+            <span class="text-[10px] sm:text-xs font-nav uppercase"
               >[ Photo: Canvas Art ]</span
             >
           </div>
-          <div class="p-6">
-            <h3 class="font-serif-artistic text-lg text-zinc-900">
-              Botanical Canvas Piece
-            </h3>
-            <p class="text-xs text-zinc-500 mt-1 leading-relaxed">
-              Original minimalist wall art finished with sealed acrylics.
-            </p>
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="font-serif-artistic text-xs sm:text-base md:text-lg text-zinc-900 leading-snug"
+              >
+                Canvas Piece
+              </h3>
+              <p
+                class="text-[10px] sm:text-xs text-zinc-500 mt-1 leading-normal"
+              >
+                Original minimalist wall art sealed acrylics.
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="bg-white rounded-2xl overflow-hidden border border-rose-100 shadow-sm hover:shadow-md transition"
+          class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
         >
           <div
-            class="h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400"
+            class="h-36 sm:h-52 md:h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400 p-2 text-center"
           >
-            <span class="text-xs font-nav uppercase">[ Photo: Tote Bag ]</span>
+            <span class="text-[10px] sm:text-xs font-nav uppercase"
+              >[ Photo: Tote Bag ]</span
+            >
           </div>
-          <div class="p-6">
-            <h3 class="font-serif-artistic text-lg text-zinc-900">
-              Hand-Painted Tote Bags
-            </h3>
-            <p class="text-xs text-zinc-500 mt-1 leading-relaxed">
-              Durable cotton canvas totes featuring custom floral doodles.
-            </p>
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="font-serif-artistic text-xs sm:text-base md:text-lg text-zinc-900 leading-snug"
+              >
+                Tote Bags
+              </h3>
+              <p
+                class="text-[10px] sm:text-xs text-zinc-500 mt-1 leading-normal"
+              >
+                Durable cotton canvas totes with doodles.
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="bg-white rounded-2xl overflow-hidden border border-rose-100 shadow-sm hover:shadow-md transition"
+          class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
         >
           <div
-            class="h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400"
+            class="h-36 sm:h-52 md:h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400 p-2 text-center"
           >
-            <span class="text-xs font-nav uppercase"
+            <span class="text-[10px] sm:text-xs font-nav uppercase"
               >[ Photo: Flower Pot ]</span
             >
           </div>
-          <div class="p-6">
-            <h3 class="font-serif-artistic text-lg text-zinc-900">
-              Painted Terracotta Pots
-            </h3>
-            <p class="text-xs text-zinc-500 mt-1 leading-relaxed">
-              Weather-sealed custom pots to bring life to your indoor garden.
-            </p>
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="font-serif-artistic text-xs sm:text-base md:text-lg text-zinc-900 leading-snug"
+              >
+                Terracotta Pots
+              </h3>
+              <p
+                class="text-[10px] sm:text-xs text-zinc-500 mt-1 leading-normal"
+              >
+                Weather-sealed custom indoor plant pots.
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="bg-white rounded-2xl overflow-hidden border border-rose-100 shadow-sm hover:shadow-md transition"
+          class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
         >
           <div
-            class="h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400"
+            class="h-36 sm:h-52 md:h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400 p-2 text-center"
           >
-            <span class="text-xs font-nav uppercase"
-              >[ Photo: Umbrella / Apparel ]</span
+            <span class="text-[10px] sm:text-xs font-nav uppercase"
+              >[ Photo: Apparel ]</span
             >
           </div>
-          <div class="p-6">
-            <h3 class="font-serif-artistic text-lg text-zinc-900">
-              Hand-Painted Apparel
-            </h3>
-            <p class="text-xs text-zinc-500 mt-1 leading-relaxed">
-              Custom wearable art on t-shirts, jackets, and accessories.
-            </p>
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="font-serif-artistic text-xs sm:text-base md:text-lg text-zinc-900 leading-snug"
+              >
+                Hand Apparel
+              </h3>
+              <p
+                class="text-[10px] sm:text-xs text-zinc-500 mt-1 leading-normal"
+              >
+                Wearable custom art on t-shirts & jackets.
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="bg-white rounded-2xl overflow-hidden border border-rose-100 shadow-sm hover:shadow-md transition"
+          class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
         >
           <div
-            class="h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400"
+            class="h-36 sm:h-52 md:h-64 bg-rose-50/50 flex flex-col items-center justify-center text-zinc-400 p-2 text-center"
           >
-            <span class="text-xs font-nav uppercase"
-              >[ Photo: Cards & Prints ]</span
+            <span class="text-[10px] sm:text-xs font-nav uppercase"
+              >[ Photo: Cards ]</span
             >
           </div>
-          <div class="p-6">
-            <h3 class="font-serif-artistic text-lg text-zinc-900">
-              Art Cards & Keepsakes
-            </h3>
-            <p class="text-xs text-zinc-500 mt-1 leading-relaxed">
-              Personalized greeting cards and commissioned gift pieces.
-            </p>
+          <div class="p-3 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="font-serif-artistic text-xs sm:text-base md:text-lg text-zinc-900 leading-snug"
+              >
+                Art Keepsakes
+              </h3>
+              <p
+                class="text-[10px] sm:text-xs text-zinc-500 mt-1 leading-normal"
+              >
+                Personalized greeting cards & commissions.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-white border-t border-rose-100 py-16 px-6">
+    <section
+      id="contact"
+      class="bg-white border-t border-rose-100 py-12 md:py-16 px-4 md:px-6"
+    >
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-serif-artistic text-zinc-900 mb-3">
+        <h2
+          class="text-2xl md:text-3xl font-serif-artistic text-zinc-900 mb-2 md:mb-3"
+        >
           Order or Inquire
         </h2>
-        <p class="text-zinc-600 text-sm mb-8 font-light">
+        <p class="text-zinc-600 text-xs md:text-sm mb-6 md:mb-8 font-light">
           Have a specific design or personal item in mind? Reach out directly
           via WhatsApp or Email to discuss custom requests.
         </p>
 
         <div
-          class="flex flex-col sm:flex-row justify-center items-center gap-4 font-nav text-xs tracking-wider uppercase"
+          class="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 font-nav text-xs tracking-wider uppercase"
         >
           <a
             href="https://wa.me/"
@@ -338,32 +434,49 @@
 
     <!-- Compact Footer with Bottom Right Logo -->
     <footer class="mt-auto py-6 border-t border-rose-100 bg-white">
-      <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <!-- Left side: Copyright details -->
+      <div
+        class="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between"
+      >
         <div class="text-left">
           <p
-            class="text-xs font-nav font-medium text-zinc-800 uppercase tracking-wider"
+            class="text-[11px] md:text-xs font-nav font-medium text-zinc-800 uppercase tracking-wider"
           >
             Colours by Val
           </p>
-          <p class="text-[11px] text-zinc-400 font-light mt-0.5">
+          <p class="text-[10px] md:text-[11px] text-zinc-400 font-light mt-0.5">
             &copy; 2026. Handcrafted in Ireland.
           </p>
         </div>
 
-        <!-- Right side: Small logo badge -->
         <div class="flex items-center gap-2">
           <span
             class="text-[10px] font-nav uppercase tracking-widest text-zinc-400 hidden sm:inline"
             >Handmade Art</span
           >
           <img
-            src="logo.png"
+            src="logo.jpg"
             alt="Colours by Val Logo"
-            class="h-9 w-9 rounded-full object-cover border border-rose-200 shadow-xs"
+            class="h-8 w-8 md:h-9 md:w-9 rounded-full object-cover border border-rose-200 shadow-xs"
           />
         </div>
       </div>
     </footer>
+
+    <!-- Simple JavaScript for Mobile Hamburger Toggle & Auto-Close -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Automatically close menu when a link is tapped
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
