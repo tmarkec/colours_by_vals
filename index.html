@@ -197,7 +197,7 @@
             keepsakes has grown into custom hand-painted collections.
           </p>
           <p
-            class="text-zinc-600 text-base md:text-sm leading-relaxed font-light mb-5"
+            class="text-zinc-600 text-xs md:text-sm leading-relaxed font-light mb-5"
           >
             Every piece is painted individually using quality acrylics and
             fine-line markers—meaning no two items are ever identical. Whether
@@ -219,7 +219,7 @@
       </div>
     </section>
 
-    <!-- Gallery / Work Section (2-Column Grid on Mobile: grid-cols-2) -->
+    <!-- Gallery / Work Section (2 Columns on Mobile) -->
     <section
       id="gallery"
       class="max-w-6xl mx-auto px-3 md:px-6 py-12 md:py-16 border-t border-rose-100/60"
@@ -236,7 +236,6 @@
         <div class="w-10 h-0.5 bg-rose-300 mx-auto mt-2 rounded-full"></div>
       </div>
 
-      <!-- 2 Columns on Mobile (grid-cols-2), 3 Columns on Desktop (lg:grid-cols-3) -->
       <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
         <div
           class="bg-white rounded-xl md:rounded-2xl overflow-hidden border border-rose-100 shadow-xs hover:shadow-md transition flex flex-col"
@@ -396,7 +395,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact & Social Media Section -->
     <section
       id="contact"
       class="bg-white border-t border-rose-100 py-12 md:py-16 px-4 md:px-6"
@@ -407,56 +406,92 @@
         >
           Order or Inquire
         </h2>
-        <p class="text-zinc-600 text-xs md:text-sm mb-6 md:mb-8 font-light">
+        <p class="text-zinc-600 text-xs md:text-sm mb-6 font-light">
           Have a specific design or personal item in mind? Reach out directly
-          via WhatsApp or Email to discuss custom requests.
+          via WhatsApp, email, or social media to discuss custom requests.
         </p>
 
+        <!-- Primary Action Buttons -->
         <div
-          class="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 font-nav text-xs tracking-wider uppercase"
+          class="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 font-nav text-xs tracking-wider uppercase mb-8"
         >
           <a
-            href="https://wa.me/"
+            href="https://wa.me/353830392742"
             target="_blank"
-            class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-3.5 rounded-full transition shadow-sm"
+            class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-8 py-3.5 rounded-full transition shadow-sm flex items-center justify-center gap-2"
           >
-            WhatsApp Direct Chat
+            <span>WhatsApp Chat</span>
           </a>
           <a
-            href="mailto:totmarko1@yahoo.com"
-            class="w-full sm:w-auto bg-rose-50 hover:bg-rose-100 text-zinc-800 font-medium px-8 py-3.5 rounded-full border border-rose-200 transition"
+            href="mailto:valeriabencic@gmail.com"
+            class="w-full sm:w-auto bg-rose-50 hover:bg-rose-100 text-zinc-800 font-medium px-8 py-3.5 rounded-full border border-rose-200 transition flex items-center justify-center gap-2"
           >
-            Email Val
+            <span>Email Val</span>
           </a>
+        </div>
+
+        <!-- Social Media Badge Bar -->
+        <div
+          class="pt-6 border-t border-rose-100/60 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-nav"
+        >
+          <span class="text-zinc-400 uppercase tracking-widest text-[10px]"
+            >Follow My Work:</span
+          >
+          <div class="flex items-center gap-4">
+            <a
+              href="https://instagram.com/coloursbyval"
+              target="_blank"
+              class="text-zinc-700 hover:text-rose-500 font-medium flex items-center gap-1.5 transition"
+            >
+              <span>Instagram (@coloursbyval)</span>
+            </a>
+            <span class="text-zinc-300">•</span>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="text-zinc-700 hover:text-rose-500 font-medium flex items-center gap-1.5 transition"
+            >
+              <span>Facebook (Colours by Val)</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Compact Footer with Bottom Right Logo -->
+    <!-- Compact Footer -->
     <footer class="mt-auto py-6 border-t border-rose-100 bg-white">
       <div
-        class="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between"
+        class="max-w-6xl mx-auto px-4 md:px-6 flex flex-col sm:flex-row items-center justify-between gap-4"
       >
-        <div class="text-left">
+        <div class="text-center sm:text-left">
           <p
             class="text-[11px] md:text-xs font-nav font-medium text-zinc-800 uppercase tracking-wider"
           >
             Colours by Val
           </p>
           <p class="text-[10px] md:text-[11px] text-zinc-400 font-light mt-0.5">
-            &copy; 2026. Handcrafted in Ireland.
+            valeriabencic@gmail.com • 083 039 2742
           </p>
         </div>
 
-        <div class="flex items-center gap-2">
-          <span
-            class="text-[10px] font-nav uppercase tracking-widest text-zinc-400 hidden sm:inline"
-            >Handmade Art</span
+        <div class="flex items-center gap-3">
+          <a
+            href="https://instagram.com/coloursbyval"
+            target="_blank"
+            class="text-[10px] font-nav uppercase tracking-widest text-zinc-400 hover:text-rose-500 transition"
+            >Instagram</a
+          >
+          <span class="text-zinc-300">•</span>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-[10px] font-nav uppercase tracking-widest text-zinc-400 hover:text-rose-500 transition"
+            >Facebook</a
           >
           <img
             src="logo.png"
             alt="Colours by Val Logo"
-            class="h-8 w-8 md:h-9 md:w-9 rounded-full object-cover border border-rose-200 shadow-xs"
+            class="h-8 w-8 md:h-9 md:w-9 rounded-full object-cover border border-rose-200 shadow-xs ml-1"
           />
         </div>
       </div>
@@ -471,7 +506,6 @@
         mobileMenu.classList.toggle("hidden");
       });
 
-      // Automatically close menu when a link is tapped
       document.querySelectorAll("#mobile-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           mobileMenu.classList.add("hidden");
